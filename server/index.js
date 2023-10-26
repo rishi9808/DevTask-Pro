@@ -1,13 +1,27 @@
-const express = require('express');
+import express from 'express';
 const app = express();
-const cors = require('cors');
+import mongoose from 'mongoose';
+import cors from 'cors';
 const PORT = process.env.PORT || 3000;
+
+import { newTask } from './src/routes/admin/newTask.js';
+import { userAuthRouter } from './src/routes/users/studentAuth.js';
+
 // Middleware
 app.use(express.json());
 app.use(cors())
 
+
+app.use("/newtask",newTask);
+app.use("/userauth",userAuthRouter)
+
 const main = async () => {
 
+    mongoose.connect("mongodb://127.0.0.1:27017/taskmng", {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+      });
+      mongoose.set('strictQuery', false);
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`)

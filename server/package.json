@@ -11,12 +11,14 @@
     "url": "git+https://github.com/rishi9808/DevTask-Pro.git"
   },
   "author": "",
+  "type": "module",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/rishi9808/DevTask-Pro/issues"
   },
   "homepage": "https://github.com/rishi9808/DevTask-Pro#readme",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
