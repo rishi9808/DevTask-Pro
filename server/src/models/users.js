@@ -1,24 +1,15 @@
-import mongoose from "mongoose";
+const mongoose=require('mongoose');
 
-const studentSchema = new mongoose.Schema(
+const usersSchema = new mongoose.Schema(
   {
     fullName: { type: String, required: true },
     userName: { type: String, required: true },
     passWord: { type: String, required: true },
-    age: { type: Number },
-    district: { type: String, required: true },
-    eli_status: { type: String },
     skills: { type: [String] },
-    savedJobs: {
-      type: [
-        {
-          type: mongoose.Schema.Types.ObjectId,
-          ref: "postedJobs",
-        },
-      ],
-    },
+    availStatus:{type:Boolean,required:true,default:true},
+    jobdone:{type:Number,required:true,default:0},
   },
-  { collection: "students" }
+  { collection: "users" }
 );
 
-export const studentModel = mongoose.model("students", studentSchema);
+export const usersmodel = mongoose.model("users", usersSchema);

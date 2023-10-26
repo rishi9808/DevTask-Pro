@@ -1,21 +1,15 @@
-import mongoose from "mongoose";
+const mongoose=require('mongoose');
 
-const postedJobsSchema = new mongoose.Schema({
-    jmid:{type: mongoose.Schema.Types.ObjectId, ref: 'jobManagers',required:true},
-    jid:{type: mongoose.Schema.Types.ObjectId, ref: 'jobs',required:true},
-    isExpired:{type:Boolean, required:true, default:false },
-    title:{type:String},
-    date:{type:Date,required:true},
-    no_stud:{type:Number,required:true,default:0},
-    invLink:{type:String},
-    district:{type:String},
-    city:{type:String},
-    wage:{type:Number},
-    jobCat:{type:String}
+const tasksSchema = new mongoose.Schema({
+    assignedTo:{type: mongoose.Schema.Types.ObjectId, ref: 'users',required:true,default:null},
+    title:{type:String, required:true},
+    availStatus:{type:String,required:true,default:"pending"},
+    reqSkills: { type: [String] },
+    timeReq:{type:Number},
 
     
 },
-{ collection: "postedJobs" }
+{ collection: "tasks" }
 )
 
-export const postedJobsModel = mongoose.model("postedJobs",postedJobsSchema);
+export const tasksmodel = mongoose.model("tasks",tasksSchema);
