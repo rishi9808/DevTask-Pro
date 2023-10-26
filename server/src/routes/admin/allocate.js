@@ -1,7 +1,6 @@
 import express from 'express';
 import  { tasksmodel } from "../../models/tasks.js";
 import  { usersmodel } from "../../models/users.js";
-//use http://localhost:3002/newtask
 async function allocate(){
     var pendTasks,availUsers
     try {

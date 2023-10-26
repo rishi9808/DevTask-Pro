@@ -1,0 +1,94 @@
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    height: 20px;
+  }
+  .main-content {
+    display: flex;
+  }
+  .center-section {
+    flex: 4;
+    padding: 20px;
+  }
+  
+  /* Style the job card */
+  .job-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the job footer */
+  .job-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  /* Style the registration button */
+  .registration-button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  /* Style the right section */
+  .right-section {
+    flex: 1;
+    padding: 20px;
+    min-height: 450px;
+    /* max-width: 300px; */
+  }
+  
+  /* Style the ad space */
+  .ad-space {
+    background-color: #f1f1f1;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the footer */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+  }
+  footer p{
+    margin-block-start: 5px;
+    margin-block-end: 5px;
+  }
+  .sortingDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+  }
+  #sortMenu {
+    appearance: none;
+    max-width: 200px;
+    background-color: inherit;
+    border: none;
+    text-align: left;
+    padding-left: 20px;
+    outline: none;
+  }
+  #sortMenu:focus {
+    box-shadow: none;
+    appearance: none;
+    max-width: 200px;
+    background-color: inherit;
+    border: none;
+    text-align: left;
+    padding-left: 20px;
+    outline: none;
+  }

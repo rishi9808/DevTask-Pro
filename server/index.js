@@ -2,10 +2,10 @@ import express from 'express';
 const app = express();
 import mongoose from 'mongoose';
 import cors from 'cors';
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3002;
 
 import { newTask } from './src/routes/admin/newTask.js';
-import { userAuthRouter } from './src/routes/users/studentAuth.js';
+import { userAuthRouter } from './src/routes/users/userAuth.js';
 import { taskWorkRouter } from './src/routes/users/taskWork.js';
 
 // Middleware

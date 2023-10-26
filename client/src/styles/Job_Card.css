@@ -1,0 +1,44 @@
+
+  
+  /* Style the job card */
+  .job_card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the job footer */
+  .job_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  /* Style the registration button */
+  .registration_button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  .center_section {
+    flex: 4;
+    padding: 20px;
+  }
+
+  .dateSpan{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+ .dateSpan p{
+  margin: 0;
+  margin-left: 10px;
+  font-size: 15px;
+  color: #656464;
+ }
