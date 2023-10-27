@@ -134,13 +134,13 @@ function StudentRegister(props) {
                           onChange={handleSkillsSet}
                         >
                           <option value="None">None</option>
-                          <option value="skill_1">
-                            skill_1
+                          <option value="skill1">
+                            skill1
                           </option>
-                          <option value="skill_2">
-                            skill_2
+                          <option value="skill2">
+                            skill2
                           </option>
-                          <option value="skill_3">skill_3</option>
+                          <option value="skill3">skill3</option>
                         </select>
                       </div>
                       <div className="col">
@@ -152,13 +152,13 @@ function StudentRegister(props) {
                           onChange={handleSkillsSet}
                         >
                           <option value="None">None</option>
-                          <option value="skill_1">
-                            skill_1
+                          <option value="skill1">
+                            skill1
                           </option>
-                          <option value="skill_2">
-                            skill_2
+                          <option value="skill2">
+                            skill2
                           </option>
-                          <option value="skill_3">skill_3</option>
+                          <option value="skill3">skill3</option>
                         </select>
                       </div>
                       <div className="col">
@@ -170,13 +170,13 @@ function StudentRegister(props) {
                           onChange={handleSkillsSet}
                         >
                           <option value="None">None</option>
-                          <option value="skill_1">
-                            skill_1
+                          <option value="skill1">
+                            skill1
                           </option>
-                          <option value="skill_2">
-                            skill_2
+                          <option value="skill2">
+                            skill2
                           </option>
-                          <option value="skill_3">skill_3</option>
+                          <option value="skill3">skill3</option>
                         </select>
                       </div>
                     </div>

@@ -32,8 +32,7 @@ function Navbar(prop) {
         <div className="collapse navbar-collapse" id="navbarCollapse">
             <div className="navbar-nav ms-auto p-4 p-lg-0">
                 {NavElements.N_Home && <Link to="/shome" className="nav-item nav-link">Home</Link> }
-                <Link to=""  className="nav-item nav-link ">User</Link>
-                <Link to="/sdashb"  className="nav-item nav-link ">Admin</Link>
+
                 {NavElements.N_Noti && <Link to="" className="nav-item nav-link" onClick={() => prop.toggle_noti()}>Notifications</Link> }
             </div>
             {NavElements.N_Logout && <button  onClick={logout}className="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Logout<i className=""></i></button> }

@@ -32,7 +32,7 @@ function NavbarJm (prop){
     return(
 
         <nav className="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0" style={{display:'flex',flexGrow:1,height:'73px'}}>
-        <h1 className=" d-flex align-items-center text-center py-0 px-4 px-lg-5 m-0 text-primary">HIREMEUP</h1>
+        <h1 className=" d-flex align-items-center text-center py-0 px-4 px-lg-5 m-0 text-primary">Task Manager</h1>
         <div className="collapse navbar-collapse" id="navbarCollapse">
             <div className="navbar-nav ms-auto p-4 p-lg-0">
                 {NavElements.N_Home && <Link to="/jmhome" className="nav-item nav-link">Home</Link> }

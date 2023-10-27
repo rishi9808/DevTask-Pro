@@ -20,12 +20,16 @@ function StudentLogin(props) {
     async function handleSubmit(event) {
         event.preventDefault();
         try {
-            const response = await axios.post("http://localhost:3002/studentauth/login",
+            const response = await axios.post("http://localhost:3002/userauth/login",
                 {
                     userName: data.userName,
                     passWord: data.passWord
                 });
-            console.log(response);
+            if(response.data.token==="admin"){
+                navigate("/jmhome")
+            }
+            else{
+                console.log(response);
             if (response.data.message === "User does not exist")
                 alert("Incorrect Username");
             else if (response.data.message === "Incorrect Password")
@@ -34,14 +38,16 @@ function StudentLogin(props) {
                 alert("You have been logined")
                 setCookies("access_token_s", response.data.token);
                 window.localStorage.setItem("s_userId", response.data.userId);
-                window.sessionStorage.setItem("SavedJobs",JSON.stringify(response.data.savedJobs))
             }
+            navigate("/shome")
+            }
+            
 
         }
         catch (err) {
             console.log(err);
         }
-        navigate("/shome")
+        
     }
     return (
 
