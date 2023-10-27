@@ -1,6 +1,4 @@
-import { useEffect, useState } from 'react';
 import NavbarJm from '../../Components/Admin/NavbarJm.jsx'
-import { useCookies } from 'react-cookie'
 import { useNavigate } from 'react-router-dom'
 import '../../styles/StudentHome.css'
 import Footer from '../../Components/Common/Footer.jsx';

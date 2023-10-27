@@ -7,6 +7,7 @@ const PORT = process.env.PORT || 3002;
 import { newTask } from './src/routes/admin/newTask.js';
 import { userAuthRouter } from './src/routes/users/userAuth.js';
 import { taskWorkRouter } from './src/routes/users/taskWork.js';
+import { getTasks } from './src/routes/admin/getTasks.js';
 
 // Middleware
 app.use(express.json());
@@ -16,6 +17,7 @@ app.use(cors())
 app.use("/newtask",newTask);
 app.use("/userauth",userAuthRouter)
 app.use("/taskwork",taskWorkRouter)
+app.use("/gettasks",getTasks)
 
 const main = async () => {
 
