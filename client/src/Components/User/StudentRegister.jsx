@@ -1,4 +1,3 @@
-// import Navbar from "../Components/Navbar.jsx";
 import { useState } from "react";
 import "../../styles/StudentAuth.css";
 import axios from "axios";
@@ -15,7 +14,7 @@ function StudentRegister(props) {
     const { value, name } = event.target;
     setData((prevData) => ({
       ...prevData,
-      [name]: name === "age" ? parseInt(value) : value,
+      [name]:value,
     }));
   }
 
@@ -44,7 +43,8 @@ function StudentRegister(props) {
       );
       if (response.data.message === "User registered successfully") {
         alert("Registration completed");
-        navigate("/shome");
+        props.RegOrLog()
+        navigate("/sauth");
       } else {
         alert("email already regisetred ");
       }
@@ -130,7 +130,7 @@ function StudentRegister(props) {
                           className="form-control form-control-sm"
                           id="skills1"
                           name="skill_0"
-                          value={data.skills[1]}
+                          value={data.skills[0]}
                           onChange={handleSkillsSet}
                         >
                           <option value="None">None</option>
@@ -166,7 +166,7 @@ function StudentRegister(props) {
                           className="form-control form-control-sm"
                           id="skills3"
                           name="skill_2"
-                          value={data.skills[1]}
+                          value={data.skills[2]}
                           onChange={handleSkillsSet}
                         >
                           <option value="None">None</option>

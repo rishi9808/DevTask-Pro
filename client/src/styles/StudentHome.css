@@ -11,6 +11,10 @@
   }
   .main-content {
     display: flex;
+    flex-direction: column;
+    vertical-align: middle;
+    align-items: center;
+    
   }
   .center-section {
     flex: 4;
