@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import '../../styles/StudentAuth.css';
-import { StudentRegister } from '../../Components/User/StudentRegister';
-import { StudentLogin } from '../../Components/User/StudentLogin';
+import '../../styles/UserAuth.css';
+import { UserRegister } from '../../Components/User/UserRegister';
+import { UserLogin } from '../../Components/User/UserLogin';
 import Navbar from '../../Components/User/Navbar';
 
 function StudentAuth() {
@@ -13,7 +13,7 @@ function StudentAuth() {
         <div>
             <Navbar  />
             <div className='twoforms'>
-                {isInReg?<StudentRegister RegOrLog={RegOrLog} />:<StudentLogin RegOrLog={RegOrLog}/>}
+                {isInReg?<UserRegister RegOrLog={RegOrLog} />:<UserLogin RegOrLog={RegOrLog}/>}
             </div>
             
         </div>

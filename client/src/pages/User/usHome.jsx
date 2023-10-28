@@ -8,8 +8,7 @@ function UserHome() {
   const navigate = useNavigate();
   const [jobs, setJobs] = useState([]);
   const [activeJob, setActiveJob] = useState([false, {}]);
-  const [finishedJobs,setFinishedJobs]=useState([])
- 
+  const [finishedJobs, setFinishedJobs] = useState([]);
 
   useEffect(function () {
     if (!sessionStorage.getItem("userId")) {
@@ -21,13 +20,11 @@ function UserHome() {
 
   async function fetchJobs() {
     const userid = sessionStorage.getItem("userId");
-    //const userid = window.localStorage.getItem("userId");
     const response = await axios.get(
       `http://localhost:3002/usertasks?userid=${userid}`
     );
     console.log(response);
     setJobs(response.data);
-    
   }
   useEffect(() => {
     taskfinder();
@@ -36,7 +33,7 @@ function UserHome() {
     fetchJobs();
   }, []);
   function taskfinder() {
-    let tempfinishedJobs=[]
+    let tempfinishedJobs = [];
     for (let i = 0; i < jobs.length; i++) {
       if (jobs[i].Status === "allocated") {
         setActiveJob([true, jobs[i]]);
@@ -44,19 +41,19 @@ function UserHome() {
         tempfinishedJobs.push(jobs[i]);
       }
     }
-    setFinishedJobs(tempfinishedJobs)
-    console.log("active job is")
-    console.log(activeJob)
+    setFinishedJobs(tempfinishedJobs);
+    console.log("active job is");
+    console.log(activeJob);
   }
 
-  async function handleFinished(){
+  async function handleFinished() {
     await axios.post("http://localhost:3002/taskwork", {
       userid: activeJob[1].assignedTo,
       taskid: activeJob[1]._id,
       change: "done",
     });
-    fetchJobs()
-    setActiveJob([])
+    fetchJobs();
+    setActiveJob([]);
   }
 
   return (
@@ -79,45 +76,42 @@ function UserHome() {
                 >
                   <div className="tab-content">
                     <div id="tab-1" className="tab-pane fade show p-0 active">
-                     
-                        <div className="job-item p-4 mb-4" >
-                          <div className="row g-4">
-                            <div className="col-sm-12 col-md-8 d-flex align-items-center">
-                              <div className="text-start ps-4">
-                                <h3 className="mb-5">{activeJob[1].title}</h3>
+                      <div className="job-item p-4 mb-4">
+                        <div className="row g-4">
+                          <div className="col-sm-12 col-md-8 d-flex align-items-center">
+                            <div className="text-start ps-4">
+                              <h3 className="mb-5">{activeJob[1].title}</h3>
 
-                                <div
-                                  style={{ display: "flex", maxHeight: "20px" }}
-                                >
-                                  <span className="text-truncate me-3"></span>
-                                  <span className="text-truncate me-3">
-                                    <h6>Skill: {activeJob[1].reqSkills}</h6>
-                                  </span>
-                                  <span className="text-truncate me-3">
-                                    <h6>Time required: {activeJob[1].timeReq}Hrs</h6>
-                                  </span>
-                                  <span className="text-truncate me-0">
-                                    {/* {job.no_stud_applied}/{job.no_stud} */}
-                                  </span>
-                                </div>
+                              <div
+                                style={{ display: "flex", maxHeight: "20px" }}
+                              >
+                                <span className="text-truncate me-3"></span>
+                                <span className="text-truncate me-3">
+                                  <h6>Skill: {activeJob[1].reqSkills}</h6>
+                                </span>
+                                <span className="text-truncate me-3">
+                                  <h6>
+                                    Time required: {activeJob[1].timeReq}Hrs
+                                  </h6>
+                                </span>
+                                <span className="text-truncate me-0"></span>
                               </div>
                             </div>
-                            <div className="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
-                              <div className="d-flex mb-3">
+                          </div>
+                          <div className="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                            <div className="d-flex mb-3">
                               <button
-                              className="btn btn-primary"
-                              onClick={function () {
-                                handleFinished();
-                              }}
-                            >
-                              Finished
-                            </button>
-                              </div>
-                              {/* <small className="text-truncate"><i className="far fa-calendar-alt text-primary me-2"></i>Date Line: 01 Jul, 2023</small> */}
+                                className="btn btn-primary"
+                                onClick={function () {
+                                  handleFinished();
+                                }}
+                              >
+                                Finished
+                              </button>
                             </div>
                           </div>
                         </div>
-                     
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -135,9 +129,9 @@ function UserHome() {
               </div>
             </>
           )}
-          {finishedJobs?
-          <>
-            <div className="container">
+          {finishedJobs ? (
+            <>
+              <div className="container">
                 <h3
                   className="text-center mb-5 wow fadeInUp"
                   data-wow-delay="0.1s"
@@ -145,7 +139,6 @@ function UserHome() {
                   Your Finished Tasks
                 </h3>
               </div>
-
 
               <div className="container">
                 <div
@@ -171,23 +164,19 @@ function UserHome() {
                                   <span className="text-truncate me-3">
                                     <h6>Time required: {job.timeReq}Hrs</h6>
                                   </span>
-                                  <span className="text-truncate me-0">
-                                    {/* {job.no_stud_applied}/{job.no_stud} */}
-                                  </span>
+                                  <span className="text-truncate me-0"></span>
                                 </div>
                               </div>
                             </div>
                             <div className="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
                               <div className="d-flex mb-3">
-                              <button
-  className="btn  disabled-button"
-  disabled
->
-  Finished
-</button>
-
+                                <button
+                                  className="btn  disabled-button"
+                                  disabled
+                                >
+                                  Finished
+                                </button>
                               </div>
-                              {/* <small className="text-truncate"><i className="far fa-calendar-alt text-primary me-2"></i>Date Line: 01 Jul, 2023</small> */}
                             </div>
                           </div>
                         </div>
@@ -196,12 +185,10 @@ function UserHome() {
                   </div>
                 </div>
               </div>
-
-          </>
-          :
-          <>
-
-          </>}
+            </>
+          ) : (
+            <></>
+          )}
         </div>
       </div>
       <Footer />

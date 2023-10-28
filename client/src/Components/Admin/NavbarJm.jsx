@@ -1,14 +1,6 @@
 import {Link} from "react-router-dom";
-import {useCookies} from 'react-cookie';
-import {useNavigate} from 'react-router-dom'
+
 function NavbarJm (prop){
-    const [Cookies,setCookies]=useCookies(["access_token_jm"]);
-    const navigate=useNavigate();
-    function logout(){
-        setCookies("access_token_jm","");
-        window.localStorage.removeItem("jm_userId");
-        navigate("/jmauth")
-    }
     return(
 
         <nav className="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0" style={{display:'flex',flexGrow:1,height:'73px'}}>
