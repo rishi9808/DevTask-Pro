@@ -1,11 +1,12 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import StudentHome from "./pages/User/usHome.jsx";
-import StudentAuth from "./pages/User/usAuth.jsx";
-import JmHome from "./pages/Admin/adHome.jsx";
-import AdFinished from "./pages/Admin/adFinisehd.jsx";
-import AdPending from "./pages/Admin/adPending.jsx";
-import AdWorking from "./pages/Admin/adWorking.jsx";
-import FirstPage from "./pages/User/Starting.jsx";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import  StudentHome  from './pages/User/usHome.jsx';
+import  StudentAuth  from './pages/User/usAuth.jsx';
+import JmHome from './pages/Admin/adHome.jsx';
+import AdFinished from './pages/Admin/adFinisehd.jsx';
+import AdPending from './pages/Admin/adPending.jsx';
+import AdWorking from './pages/Admin/adWorking.jsx';
+import FirstPage from './pages/User/Starting.jsx';
+import { ShowEmployee } from './pages/Admin/adEmployee.jsx';
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
           <Route path="/adfinished" element={<AdFinished />} />
           <Route path="/adworking" element={<AdWorking />} />
           <Route path="/adpending" element={<AdPending />} />
+          <Route path="/employees" element={<ShowEmployee />} />
+
+
         </Routes>
       </Router>
     </div>
