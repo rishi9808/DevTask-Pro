@@ -1,8 +1,8 @@
 import { useState } from "react";
-import "../../styles/StudentAuth.css";
+import "../../styles/UserAuth.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-function StudentRegister(props) {
+function UserRegister(props) {
   const navigate = useNavigate();
   const [data, setData] = useState({
     fullName: "",
@@ -204,4 +204,4 @@ function StudentRegister(props) {
   );
 }
 
-export { StudentRegister };
+export { UserRegister };

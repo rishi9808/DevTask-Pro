@@ -1,12 +1,10 @@
 import { useState } from 'react';
-import '../../styles/StudentAuth.css';
+import '../../styles/UserAuth.css';
 import axios from 'axios';
-import { useCookies } from 'react-cookie'
 import { useNavigate } from 'react-router-dom'
 
-function StudentLogin(props) {
+function UserLogin(props) {
     const [data, setData] = useState({ userName: "", passWord: "" });
-    const [Cookies, setCookies] = useCookies(["access_token_s"]);
     const navigate = useNavigate();
     function handleChange(event) {
         const { value, name } = event.target;
@@ -35,7 +33,6 @@ function StudentLogin(props) {
                 alert("Incoorect Password");
             else if (response.data.message === "You are successfully logined in") {
                 alert("You have been logined")
-                setCookies("access_token_s", response.data.token);
                 sessionStorage.setItem("userId", response.data.userId);
                 //window.localStorage.setItem("userId", response.data.userId);
             }
@@ -91,4 +88,4 @@ function StudentLogin(props) {
     );
 }
 
-export { StudentLogin };
+export { UserLogin };

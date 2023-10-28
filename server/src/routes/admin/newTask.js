@@ -19,7 +19,6 @@ router.post("/", async function (req, res) { //
     });
     await newTask.save();
     allocate();
-    //console.log("saved new job and job is",newPostedJob);
     res.json({ message: "saved new job successfully", job: newTask });
 
 })

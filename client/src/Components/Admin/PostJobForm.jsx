@@ -26,8 +26,6 @@ function PostJobForm(prop) {
                 reqSkills:Data.reqSkills
 
             });
-            console.log(res);
-            // prop.openpopUp_nj();
             alert(res.data.message);
             if(res.data.message==="saved new job successfully"){
               navigate('/jmhome')

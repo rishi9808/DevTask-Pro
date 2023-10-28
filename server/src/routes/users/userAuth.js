@@ -2,6 +2,7 @@ import express from "express";
 import { usersmodel } from "../../models/users.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
+import { allocate } from "../admin/allocate.js";
 //use http://localhost:3002/userauth
 
 const router = express.Router();
@@ -26,11 +27,11 @@ router.post("/register", async function (req, res) {
     
   });
   await newUser.save();
+  allocate();
   res.json({ message: "User registered successfully" });
 });
 
 router.post("/login", async function (req, res) {
-  //console.log("The req recieved to login for Student is",req.body);
   const { userName, passWord } = req.body;
   if(userName=="admin@123" && passWord=="admin"){
     res.json({

@@ -1,10 +1,7 @@
 import { useEffect, useState } from 'react';
 import NavbarJm from '../../Components/Admin/NavbarJm.jsx'
-import { useCookies } from 'react-cookie'
-import { useNavigate } from 'react-router-dom'
-import '../../styles/StudentHome.css'
+import '../../styles/UserHome.css'
 import Footer from '../../Components/Common/Footer.jsx';
-import { PostJobForm } from '../../Components/Admin/PostJobForm.jsx';
 import axios from "axios";
 
 
@@ -66,7 +63,7 @@ function AdPending() {
                             </span>
                             <span className="text-truncate me-0">
                               
-                              {/* {job.no_stud_applied}/{job.no_stud} */}
+                          
                             </span>
                           </div>
                         </div>
@@ -76,7 +73,7 @@ function AdPending() {
                           
                          <h2>Status: Waiting to allocate</h2>
                         </div>
-                        {/* <small className="text-truncate"><i className="far fa-calendar-alt text-primary me-2"></i>Date Line: 01 Jul, 2023</small> */}
+                    
                       </div>
                     </div>
                   </div>
