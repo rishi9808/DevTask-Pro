@@ -15,6 +15,7 @@ import { userAuthRouter } from './src/routes/users/userAuth.js';
 import { taskWorkRouter } from './src/routes/users/taskWork.js';
 import { getTasks } from './src/routes/admin/getTasks.js';
 import { userTasks } from './src/routes/users/usertasks.js';
+import { getUsers } from './src/routes/admin/getUsers.js';
 
 // Middleware
 app.use(express.json());
@@ -26,6 +27,7 @@ app.use("/userauth",userAuthRouter)
 app.use("/taskwork",taskWorkRouter)
 app.use("/gettasks",getTasks)
 app.use("/usertasks",userTasks)
+app.use("/getusers",getUsers)
 
 const main = async () => {
 

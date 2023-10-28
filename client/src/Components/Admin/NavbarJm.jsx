@@ -11,6 +11,9 @@ function NavbarJm (prop){
                 <Link to="/adfinished"  className="nav-item nav-link ">Finished Tasks</Link>
                 <Link to="/adworking"   className="nav-item nav-link">Working Tasks</Link>
                 <Link to="/adpending"   className="nav-item nav-link">Pending Tasks</Link>
+                <Link to="/employees"   className="nav-item nav-link">Employee Status</Link>
+  
+
             </div>
             
         </div>
