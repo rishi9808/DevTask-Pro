@@ -3,7 +3,7 @@
 Our project involves the development of a web-based platform that incorporates a dynamic work allocation algorithm to facilitate efficient task assignment within our software development team. The primary objective is to enhance team productivity by ensuring a balanced and fair distribution of tasks, considering individual team members' skills, availability, and existing workload.
 
 ## Team Name
- VR Devs
+  VR Devs
 
 ## Team members
 1. Rishikesh k v     https://github.com/rishi9808
@@ -11,14 +11,6 @@ Our project involves the development of a web-based platform that incorporates a
 3. Vismaya B         https://github.com/VismayaBalan
 4. Razeen Mahroof    https://github.com/razeenmahroof
    
-
-
-## Link to product walkthrough
-[link to video]( )
-
-
-## How it Works ?
-
 
 ## Technologies used
 Mongodb <br />
