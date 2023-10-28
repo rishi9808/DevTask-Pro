@@ -3,7 +3,7 @@ import { usersmodel } from "../../models/users.js";
 import { tasksmodel } from "../../models/tasks.js";
 import { allocate } from "../admin/allocate.js";
 
-//use http://localhost:3002/usertasks
+//use https://devtask-pro.onrender.com/usertasks
 
 const router = express.Router();
 

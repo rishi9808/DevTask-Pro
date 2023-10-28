@@ -5,7 +5,7 @@ import NavbarJm from '../../Components/Admin/NavbarJm.jsx'
 function ShowEmployee() { // need postedjob id and a functioon to close this popup
   const [Appls, setAppls] = useState([]);
   async function fetchAppl() {
-    const response = await axios.get(`http://localhost:3002/getusers`)
+    const response = await axios.get(`https://devtask-pro.onrender.com/getusers`)
     setAppls(response.data);
     console.log("here is the application data")
     console.log(response.data)

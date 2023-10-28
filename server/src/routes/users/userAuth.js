@@ -3,7 +3,7 @@ import { usersmodel } from "../../models/users.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import { allocate } from "../admin/allocate.js";
-//use http://localhost:3002/userauth
+//use https://devtask-pro.onrender.com/userauth
 
 const router = express.Router();
 

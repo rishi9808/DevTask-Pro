@@ -2,7 +2,7 @@ import express from 'express';
 import  { tasksmodel } from "../../models/tasks.js";
 import { allocate } from './allocate.js';
 import { usersmodel } from '../../models/users.js';
-//use http://localhost:3002/getusers
+//use https://devtask-pro.onrender.com/getusers
 
 const router = express.Router();
 

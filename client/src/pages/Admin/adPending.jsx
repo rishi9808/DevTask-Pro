@@ -10,7 +10,7 @@ function AdPending() {
   async function fetchJobs() {
     const mode = "Pending";
     const response = await axios.get(
-      `http://localhost:3002/gettasks?mode=${mode}`
+      `https://devtask-pro.onrender.com/gettasks?mode=${mode}`
     );
     console.log(response);
     setJobs(response.data);
@@ -53,7 +53,7 @@ function AdPending() {
                 </div>
                 ))}
               </div>
-              
+
               {/* <div className="tab-content">
                 <div id="tab-1" className="tab-pane fade show p-0 active">
                   {jobs.map((job, index) => (

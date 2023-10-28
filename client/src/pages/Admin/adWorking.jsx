@@ -10,7 +10,7 @@ function AdWorking() {
   async function fetchJobs() {
     const mode = "Working";
     const response = await axios.get(
-      `http://localhost:3002/gettasks?mode=${mode}`
+      `https://devtask-pro.onrender.com/gettasks?mode=${mode}`
     );
     console.log(response);
     setJobs(response.data);

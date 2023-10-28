@@ -1,8 +1,8 @@
 import { useState } from "react";
-import "../../styles/UserAuth.css";
+import "../../styles/StudentAuth.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-function UserRegister(props) {
+function StudentRegister(props) {
   const navigate = useNavigate();
   const [data, setData] = useState({
     fullName: "",
@@ -14,7 +14,7 @@ function UserRegister(props) {
     const { value, name } = event.target;
     setData((prevData) => ({
       ...prevData,
-      [name]: value,
+      [name]:value,
     }));
   }
 
@@ -43,7 +43,7 @@ function UserRegister(props) {
       );
       if (response.data.message === "User registered successfully") {
         alert("Registration completed");
-        props.RegOrLog();
+        props.RegOrLog()
         navigate("/sauth");
       } else {
         alert("email already regisetred ");
@@ -57,14 +57,9 @@ function UserRegister(props) {
     <>
       <div className="authCentreDiv m-2">
         <div className="about-section">
-          <h1>Empowering Task Distributors for Seamless Efficiency </h1>
-          <br />
-          <br />
-          <p>
-            Unlock your potential as a task distributor and seize opportunities
-            with our online portal. Connecting task distributors and businesses
-            effortlessly, we facilitate efficient task allocation .
-          </p>
+        <h1>Empowering Task Distributors for Seamless Efficiency </h1>
+                <br /><br />
+                <p>Unlock your potential as a task distributor and seize opportunities with our online portal. Connecting task distributors and businesses effortlessly, we facilitate efficient task allocation .</p>
         </div>
 
         <div className="col-12 col-md-9 col-lg-7 col-xl-6 signup-section ">
@@ -123,13 +118,14 @@ function UserRegister(props) {
                   />
                 </div>
 
+
                 <label className="form-label" htmlFor="sande">
                   Skills and experience
                 </label>
                 <div id="sande">
                   <div className="form-group mb-4">
                     <div className="row">
-                      <div className="col">
+                    <div className="col">
                         <select
                           className="form-control form-control-sm"
                           id="skills1"
@@ -138,8 +134,12 @@ function UserRegister(props) {
                           onChange={handleSkillsSet}
                         >
                           <option value="None">None</option>
-                          <option value="skill1">skill1</option>
-                          <option value="skill2">skill2</option>
+                          <option value="skill1">
+                            skill1
+                          </option>
+                          <option value="skill2">
+                            skill2
+                          </option>
                           <option value="skill3">skill3</option>
                         </select>
                       </div>
@@ -152,8 +152,12 @@ function UserRegister(props) {
                           onChange={handleSkillsSet}
                         >
                           <option value="None">None</option>
-                          <option value="skill1">skill1</option>
-                          <option value="skill2">skill2</option>
+                          <option value="skill1">
+                            skill1
+                          </option>
+                          <option value="skill2">
+                            skill2
+                          </option>
                           <option value="skill3">skill3</option>
                         </select>
                       </div>
@@ -166,8 +170,12 @@ function UserRegister(props) {
                           onChange={handleSkillsSet}
                         >
                           <option value="None">None</option>
-                          <option value="skill1">skill1</option>
-                          <option value="skill2">skill2</option>
+                          <option value="skill1">
+                            skill1
+                          </option>
+                          <option value="skill2">
+                            skill2
+                          </option>
                           <option value="skill3">skill3</option>
                         </select>
                       </div>
@@ -191,8 +199,9 @@ function UserRegister(props) {
           </div>
         </div>
       </div>
+
     </>
   );
 }
 
-export { UserRegister };
+export { StudentRegister };

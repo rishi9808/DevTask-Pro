@@ -21,7 +21,7 @@ function UserHome() {
   async function fetchJobs() {
     const userid = sessionStorage.getItem("userId");
     const response = await axios.get(
-      `http://localhost:3002/usertasks?userid=${userid}`
+      `https://devtask-pro.onrender.com/usertasks?userid=${userid}`
     );
     console.log(response);
     setJobs(response.data);
@@ -47,7 +47,7 @@ function UserHome() {
   }
 
   async function handleFinished() {
-    await axios.post("http://localhost:3002/taskwork", {
+    await axios.post("https://devtask-pro.onrender.com/taskwork", {
       userid: activeJob[1].assignedTo,
       taskid: activeJob[1]._id,
       change: "done",

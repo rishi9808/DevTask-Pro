@@ -20,7 +20,7 @@ function PostJobForm(prop) {
     event.preventDefault();
     console.log(Data);
     try {
-      const res = await axios.post("http://localhost:3002/newtask", {
+      const res = await axios.post("https://devtask-pro.onrender.com/newtask", {
         title: Data.title,
         timeReq: Data.timeReq,
         reqSkills: Data.reqSkills,

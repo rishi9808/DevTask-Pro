@@ -10,7 +10,7 @@ function AdFinished() {
   async function fetchJobs() {
     const mode = "Finished";
     const response = await axios.get(
-      `http://localhost:3002/gettasks?mode=${mode}`
+      `https://devtask-pro.onrender.com/gettasks?mode=${mode}`
     );
     setJobs(response.data);
   }
