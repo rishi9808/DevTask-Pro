@@ -35,9 +35,8 @@ Express
 
 1.Employees can log in to their accounts.<br />
 2.Upon logging in, they can view their assigned tasks, including details such as the task name, required skills, and time constraints.<br />
-3.Employees can also view their pending tasks, which are not currently assigned to them but will be in the future.<br />
-4.Employees can mark tasks as complete when the work is done.<br />
-5.They have the ability to update the task status, which may automatically trigger task reassignment based on availability.<br />
+3.Employees can mark tasks as complete when the work is done.<br />
+4.They have the ability to update the task status, which may automatically trigger task reassignment based on availability.<br />
 
 
 ## How to configure
