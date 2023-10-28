@@ -55,14 +55,14 @@ function StudentRegister(props) {
   }
   return (
     <>
-      <div className="authCentreDiv">
+      <div className="authCentreDiv m-2">
         <div className="about-section">
         <h1>Empowering Task Distributors for Seamless Efficiency </h1>
                 <br /><br />
                 <p>Unlock your potential as a task distributor and seize opportunities with our online portal. Connecting task distributors and businesses effortlessly, we facilitate efficient task allocation .</p>
         </div>
 
-        <div className="col-12 col-md-9 col-lg-7 col-xl-6 signup-section">
+        <div className="col-12 col-md-9 col-lg-7 col-xl-6 signup-section ">
           <div
             className="card"
             style={{ borderRadius: "15px", border: "none" }}

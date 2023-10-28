@@ -51,7 +51,7 @@ function StudentLogin(props) {
     }
     return (
 
-        <div className='authCentreDiv'>
+        <div className='d-flex'>
             <div className="about-section">
                 <h1>Empowering Task Distributors for Seamless Efficiency </h1>
                 <br /><br />
@@ -77,7 +77,7 @@ function StudentLogin(props) {
 
 
                             <div className="d-flex justify-content-center">
-                                <button type="Submit" className="btn btn-outline-success">Login</button>
+                                <button type="Submit" className="btn btn-outline-success rounded-3">Login</button>
                             </div>
 
                             <p className="text-center text-muted mt-5 mb-0">Dont have an account yet? <a  className="fw-bold text-body"  onClick={props.RegOrLog}><u>Click here</u></a></p>
