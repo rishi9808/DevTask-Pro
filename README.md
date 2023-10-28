@@ -1,4 +1,4 @@
-# DevTask-Pro
+# TASKIFY
 
 Our project involves the development of a web-based platform that incorporates a dynamic work allocation algorithm to facilitate efficient task assignment within our software development team. The primary objective is to enhance team productivity by ensuring a balanced and fair distribution of tasks, considering individual team members' skills, availability, and existing workload.
 
