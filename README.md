@@ -31,8 +31,8 @@ Express
     Pending tasks<br />
     Employees' current tasks
 
-  username: admin@123
-  password: admin
+  username: admin@123 <br />
+  password: admin <br />
     
   **For Employee Users:<br />**
 
@@ -41,8 +41,8 @@ Express
 3.Employees can mark tasks as complete when the work is done.<br />
 4.They have the ability to update the task status, which may automatically trigger task reassignment based on availability.<br />
 
-username: vis@123
-password: 123
+username: vis@123 <br />
+password: 123 <br />
 
 ## Deployed Link
 
