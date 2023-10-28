@@ -19,7 +19,7 @@ React <br />
 Express
 
 ## How it works
-  #For Admin:
+  **For Admin:**
 
 1.Admin asks every employee to register with their skills. <br />
 2.Admin creates tasks with required skills and time for each task. <br />
@@ -31,7 +31,7 @@ Express
     Pending tasks<br />
     Employees' current tasks
     
-  #For Employee Users:<br />
+  **For Employee Users:<br />**
 
 1.Employees can log in to their accounts.<br />
 2.Upon logging in, they can view their assigned tasks, including details such as the task name, required skills, and time constraints.<br />
