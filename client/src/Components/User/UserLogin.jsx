@@ -103,9 +103,9 @@ function UserLogin(props) {
 
               <p className="text-center text-muted mt-5 mb-0">
                 Dont have an account yet?{" "}
-                <a className="fw-bold text-body" onClick={props.RegOrLog}>
+                <div className="fw-bold text-body" onClick={props.RegOrLog}>
                   <u>Click here</u>
-                </a>
+                </div>
               </p>
             </form>
           </div>

@@ -4,7 +4,6 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 function PostJobForm(prop) {
   const navigate = useNavigate();
-  const isPopupOpen = true;
   const [Data, setData] = useState({ title: "", timeReq: 0, reqSkills: "" });
 
   function handleChange(event) {
