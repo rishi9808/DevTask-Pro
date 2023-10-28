@@ -33,7 +33,27 @@ function AdPending() {
               className="tab-class text-center wow fadeInUp"
               data-wow-delay="0.3s"
             >
-              <div className="tab-content">
+              <div class="row">
+                {jobs.map((job, index) => (
+                <div class="col-sm-6 mb-3 " key={index}>
+                  <div class="card p-3 rounded-3">
+                    <div class="card-body">
+                      <h5 class="card-title">{job.title}</h5>
+                      <p class="text-black-50 p-1">
+
+                        Skill : <span className=" text-dark">{job.reqSkills}</span>
+                        <br />
+                        Time required :<span className=" text-dark"> {job.timeReq}Hrs</span>
+                      </p>
+                      <div class="btn btn-info rounded-3 ">
+                        Status: Pending
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                ))}
+              </div>
+              {/* <div className="tab-content">
                 <div id="tab-1" className="tab-pane fade show p-0 active">
                   {jobs.map((job, index) => (
                     <div className="job-item p-4 mb-4" key={index}>
@@ -63,7 +83,7 @@ function AdPending() {
                     </div>
                   ))}
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
