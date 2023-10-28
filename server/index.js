@@ -3,6 +3,12 @@ const app = express();
 import mongoose from 'mongoose';
 import cors from 'cors';
 const PORT = process.env.PORT || 3002;
+import dotenv from 'dotenv';
+
+dotenv.config();
+
+
+
 
 import { newTask } from './src/routes/admin/newTask.js';
 import { userAuthRouter } from './src/routes/users/userAuth.js';
@@ -21,11 +27,12 @@ app.use("/gettasks",getTasks)
 
 const main = async () => {
 
-    mongoose.connect("mongodb://127.0.0.1:27017/taskmng", {
+    mongoose.connect(process.env.DB_CONNECT, {
         useNewUrlParser: true,
         useUnifiedTopology: true
       });
       mongoose.set('strictQuery', false);
+      
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`)
