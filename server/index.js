@@ -14,7 +14,7 @@ import { newTask } from './src/routes/admin/newTask.js';
 import { userAuthRouter } from './src/routes/users/userAuth.js';
 import { taskWorkRouter } from './src/routes/users/taskWork.js';
 import { getTasks } from './src/routes/admin/getTasks.js';
-import { userTasks } from './src/routes/users/usertasks.js';
+import { userTasks } from './src/routes/users/userTasks.js';
 import { getUsers } from './src/routes/admin/getUsers.js';
 
 // Middleware
