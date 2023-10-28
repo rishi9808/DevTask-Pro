@@ -9,8 +9,7 @@ const router = express.Router();
 
 router.post("/register", async function (req, res) {
   console.log(req.body);
-  const { fullName, userName, passWord, skills} =
-    req.body;
+  const { fullName, userName, passWord, skills } = req.body;
   const user = await usersmodel.findOne({ userName });
 
   if (user) {
@@ -22,9 +21,8 @@ router.post("/register", async function (req, res) {
     userName,
     passWord: hashPassword,
     skills,
-    availStatus:true,
-    jobdone:0,
-    
+    availStatus: true,
+    jobdone: 0,
   });
   await newUser.save();
   allocate();
@@ -33,30 +31,28 @@ router.post("/register", async function (req, res) {
 
 router.post("/login", async function (req, res) {
   const { userName, passWord } = req.body;
-  if(userName=="admin@123" && passWord=="admin"){
+  if (userName == "admin@123" && passWord == "admin") {
     res.json({
       message: "You are admin",
       token: "admin",
       userId: "admin",
     });
-  }
-  else{
+  } else {
     const user = await usersmodel.findOne({ userName });
-  if (!user) {
-    return res.json({ message: "User does not exist" });
+    if (!user) {
+      return res.json({ message: "User does not exist" });
+    }
+    const isValid = await bcrypt.compare(passWord, user.passWord);
+    if (!isValid) {
+      return res.json({ message: "Incorrect Password" });
+    }
+    const token = jwt.sign({ id: user._id }, "secret");
+    res.json({
+      message: "You are successfully logined in",
+      token: token,
+      userId: user._id,
+    });
   }
-  const isValid = await bcrypt.compare(passWord, user.passWord);
-  if (!isValid) {
-    return res.json({ message: "Incorrect Password" });
-  }
-  const token = jwt.sign({ id: user._id }, "secret");
-  res.json({
-    message: "You are successfully logined in",
-    token: token,
-    userId: user._id,
-  });
-  }
-  
 });
 
 export { router as userAuthRouter };

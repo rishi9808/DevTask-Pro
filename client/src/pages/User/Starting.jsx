@@ -1,10 +1,8 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-
 function FirstPage() {
   const navigate = useNavigate();
-  
 
   useEffect(function () {
     if (!sessionStorage.getItem("userId")) {
@@ -14,9 +12,7 @@ function FirstPage() {
     }
   }, []);
 
-  
-
-  return (<></>)
+  return <></>;
 }
 
 export default FirstPage;

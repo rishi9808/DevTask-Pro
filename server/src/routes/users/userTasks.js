@@ -8,24 +8,21 @@ import { allocate } from "../admin/allocate.js";
 const router = express.Router();
 
 router.get("/", async function (req, res) {
-    const { userid } = req.query;
-    let Tasks
-    try {
-        
-        Tasks = await tasksmodel.find({ assignedTo:userid })
-    if(userid){
-        res.json(Tasks);
+  const { userid } = req.query;
+  let Tasks;
+  try {
+    Tasks = await tasksmodel.find({ assignedTo: userid });
+    if (userid) {
+      res.json(Tasks);
+    } else {
+      res.json([]);
     }
-    else{
-        res.json([]);
-    }
-      
-    } catch (err) {
-      console.log("Error when getapplied jobs is", err);
-      res.json({
-        message: "Server not connceted",
-      });
-    }
-  });
+  } catch (err) {
+    console.log("Error when getapplied jobs is", err);
+    res.json({
+      message: "Server not connceted",
+    });
+  }
+});
 
 export { router as userTasks };
