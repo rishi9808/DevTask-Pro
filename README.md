@@ -21,11 +21,11 @@ Express
 ## How it works
   **For Admin:**
 
-1.Admin asks every employee to register with their skills. <br />
-2.Admin creates tasks with required skills and time for each task. <br />
-3.The high-efficiency algorithm automatically finds the employee with the required skill who has completed the least number of tasks and is available.<br />
-4.If no such employee is available, the task is marked as pending and will be assigned to someone when they become available.<br />
-5.Admin has access to view:<br />
+1. Admin asks every employee to register with their skills. <br />
+2. Admin creates tasks with required skills and time for each task. <br />
+3. The high-efficiency algorithm automatically finds the employee with the required skill who has completed the least number of tasks and is available.<br />
+4. If no such employee is available, the task is marked as pending and will be assigned to someone when they become available.<br />
+5. Admin has access to view:<br />
     Finished tasks<br />
     Working tasks<br />
     Pending tasks<br />
@@ -36,10 +36,10 @@ Express
     
   **For Employee Users:<br />**
 
-1.Employees can log in to their accounts.<br />
-2.Upon logging in, they can view their assigned tasks, including details such as the task name, required skills, and time constraints.<br />
-3.Employees can mark tasks as complete when the work is done.<br />
-4.They have the ability to update the task status, which may automatically trigger task reassignment based on availability.<br />
+1. Employees can log in to their accounts.<br />
+2. Upon logging in, they can view their assigned tasks, including details such as the task name, required skills, and time constraints.<br />
+3. Employees can mark tasks as complete when the work is done.<br />
+4. They have the ability to update the task status, which may automatically trigger task reassignment based on availability.<br />
 
 username: vis@123 <br />
 password: 123 <br />
