@@ -32,32 +32,34 @@ function ShowEmployee() { // need postedjob id and a functioon to close this pop
   return (
     <>
     <NavbarJm  />
-    <div className='active main-content'>
+    <div className='active main-content m-5 rounded-bottom'>
       <div className="popup-content main-content">
-        <h1>Employee Status</h1>
+        <h3>Employee Status</h3>
         <table style={{ borderSpacing:'20px', borderCollapse:"separate" }}>
           <thead>
             <tr>
               <th>Sl. No.</th>
               <th >Employee  Name</th>
               <th> </th>
-
-              <th>Available?</th>
+              <th>Availability</th>
               <th>Skills</th>
               <th>Finished Tasks</th>
+              <hr />
             </tr>
           </thead>
           <tbody>
             {Appls.map((Appl, index) => (
               <tr key={index}>
                 <td>{index + 1}</td>
+              
                 <td>{Appl.fullName}</td>
                 <td>   </td>
                 <td>{getAvailability(Appl.availStatus)}</td>
                 <td>{getSkills(Appl.skills)}</td>
                 <td>{Appl.jobdone}</td>
-                
+                <hr />
               </tr>
+            
             ))}
 
           </tbody>

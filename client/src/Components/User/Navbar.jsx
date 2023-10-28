@@ -12,7 +12,7 @@ function Navbar(prop) {
       style={{ display: "flex", flexGrow: 1, height: "73px" }}
     >
       <h1 className=" d-flex align-items-center text-center py-0 px-4 px-lg-5 m-0 text-primary">
-        Task Manager
+        <a href="/">Task Manager</a>
       </h1>
       <div className="collapse navbar-collapse" id="navbarCollapse">
         <div className="navbar-nav ms-auto p-4 p-lg-0">

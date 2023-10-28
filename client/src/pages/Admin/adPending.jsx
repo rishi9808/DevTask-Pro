@@ -53,6 +53,7 @@ function AdPending() {
                 </div>
                 ))}
               </div>
+              
               {/* <div className="tab-content">
                 <div id="tab-1" className="tab-pane fade show p-0 active">
                   {jobs.map((job, index) => (

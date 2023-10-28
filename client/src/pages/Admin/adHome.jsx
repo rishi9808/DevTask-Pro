@@ -7,7 +7,7 @@ function JmHome() {
   return (
     <div>
       <NavbarJm />
-      <div className="main-content">
+      <div className="main-content p-4">
         <PostJobForm />
       </div>
       <Footer />
