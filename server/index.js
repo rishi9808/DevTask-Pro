@@ -1,9 +1,9 @@
-import express from 'express';
+import express from "express";
 const app = express();
-import mongoose from 'mongoose';
-import cors from 'cors';
+import mongoose from "mongoose";
+import cors from "cors";
 const PORT = process.env.PORT || 3002;
-import dotenv from 'dotenv';
+import dotenv from "dotenv";
 
 dotenv.config();
 
@@ -19,7 +19,7 @@ import { getUsers } from './src/routes/admin/getUsers.js';
 
 // Middleware
 app.use(express.json());
-app.use(cors())
+app.use(cors());
 
 
 app.use("/newtask",newTask);
@@ -30,20 +30,17 @@ app.use("/usertasks",userTasks)
 app.use("/getusers",getUsers)
 
 const main = async () => {
+  mongoose.connect(process.env.DB_CONNECT, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
+  mongoose.set("strictQuery", false);
 
-    mongoose.connect(process.env.DB_CONNECT, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true
-      });
-      mongoose.set('strictQuery', false);
-      
-
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`)
-});
-}
+  app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+  });
+};
 
 main().catch((err) => {
-    console.log(err);
-}
-);
+  console.log(err);
+});

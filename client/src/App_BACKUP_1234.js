@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import  StudentHome  from './pages/User/usHome.jsx';
 import  StudentAuth  from './pages/User/usAuth.jsx';
@@ -7,6 +8,16 @@ import AdPending from './pages/Admin/adPending.jsx';
 import AdWorking from './pages/Admin/adWorking.jsx';
 import FirstPage from './pages/User/Starting.jsx';
 import { ShowEmployee } from './pages/Admin/adEmployee.jsx';
+=======
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import StudentHome from "./pages/User/usHome.jsx";
+import StudentAuth from "./pages/User/usAuth.jsx";
+import JmHome from "./pages/Admin/adHome.jsx";
+import AdFinished from "./pages/Admin/adFinisehd.jsx";
+import AdPending from "./pages/Admin/adPending.jsx";
+import AdWorking from "./pages/Admin/adWorking.jsx";
+import FirstPage from "./pages/User/Starting.jsx";
+>>>>>>> efaec0f05ad5fac548142dece59b9eb0de4ff57b
 
 function App() {
   return (

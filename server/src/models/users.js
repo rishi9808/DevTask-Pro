@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 const usersSchema = new mongoose.Schema(
   {
@@ -6,8 +6,8 @@ const usersSchema = new mongoose.Schema(
     userName: { type: String, required: true },
     passWord: { type: String, required: true },
     skills: { type: [String] },
-    availStatus:{type:Boolean,required:true,default:true},
-    jobdone:{type:Number,required:true,default:0},
+    availStatus: { type: Boolean, required: true, default: true },
+    jobdone: { type: Number, required: true, default: 0 },
   },
   { collection: "users" }
 );

@@ -1,4 +1,4 @@
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function NavbarJm (prop){
     return(
@@ -17,10 +17,8 @@ function NavbarJm (prop){
             </div>
             
         </div>
-        </nav>
-
-        
-    )
+      
+    </nav>
+  );
 }
 export default NavbarJm;
-
