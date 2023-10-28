@@ -25,6 +25,7 @@ async function allocate(){
                     user.availStatus=false;
                     await usersmodel.updateOne({_id:user._id},{$set:user})
                     availUsers[j].availStatus=false
+                    break
                 }
             }
         }

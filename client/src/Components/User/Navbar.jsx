@@ -18,7 +18,7 @@ function Navbar(prop) {
     ), [])
     function logout() {
         setCookies("access_token_s", "");
-        window.localStorage.removeItem("s_userId");
+        window.localStorage.removeItem("userId");
         navigate("/sauth")
     }
     function ToJM(){
@@ -34,6 +34,7 @@ function Navbar(prop) {
                 {NavElements.N_Home && <Link to="/shome" className="nav-item nav-link">Home</Link> }
 
                 {NavElements.N_Noti && <Link to="" className="nav-item nav-link" onClick={() => prop.toggle_noti()}>Notifications</Link> }
+                <button  onClick={logout}className="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Logout<i className=""></i></button>
             </div>
             {NavElements.N_Logout && <button  onClick={logout}className="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Logout<i className=""></i></button> }
             {NavElements.N_ToJM && <a  className="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block" onClick={ToJM}>Post a Job<i className="fa fa-arrow-right ms-3"></i></a>}

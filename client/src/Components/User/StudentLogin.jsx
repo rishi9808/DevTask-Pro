@@ -1,4 +1,3 @@
-// import Navbar from "../Components/Navbar.jsx";
 import { useState } from 'react';
 import '../../styles/StudentAuth.css';
 import axios from 'axios';
@@ -37,7 +36,8 @@ function StudentLogin(props) {
             else if (response.data.message === "You are successfully logined in") {
                 alert("You have been logined")
                 setCookies("access_token_s", response.data.token);
-                window.localStorage.setItem("s_userId", response.data.userId);
+                sessionStorage.setItem("userId", response.data.userId);
+                //window.localStorage.setItem("userId", response.data.userId);
             }
             navigate("/shome")
             }
@@ -88,33 +88,6 @@ function StudentLogin(props) {
                 </div>
             </div>
         </div>
-
-
-        // <div className='authCentreDiv'>
-        //     <div className="about-section">
-        //         <h2>Student authentication</h2>
-        //         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam placerat, sapien nec eleifend aliquam, ex nibh lacinia justo, et volutpat lorem massa ac urna.</p>
-        //         <p>Pellentesque at magna at arcu vehicula euismod sed a nunc. In et sem ut elit pharetra fringilla ut vitae libero.</p>
-        //     </div>
-        //     <div className="signup-section">
-        //         <h2>Sign In</h2>
-        //         <form onSubmit={handleSubmit}>
-        //             <div className="form-group">
-
-        //                 <input placeholder='email id' type="text" id="name" name="userName" value={data.userName} onChange={handleChange} required></input>
-        //             </div>
-        //             <div className="form-group">
-
-        //                 <input placeholder='password' type="password" id="password" name="passWord" value={data.passWord} onChange={handleChange} required></input>
-        //             </div>
-        //             <div className="form-group">
-        //                 <button type="Submit">Submit</button>
-        //                 <button onClick={props.RegOrLog}>No account? create one</button>
-        //             </div>
-        //         </form>
-        //     </div>
-
-        // </div>
     );
 }
 
